@@ -1,0 +1,51 @@
+
+    <html>
+    <head>
+      <script type="text/javascript" src="../../lib/vis/dist/vis.js"></script>
+      <link                         href="../../lib/vis/dist/vis.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+
+    <div id="fe4a17b5-aa7b-4770-a29b-d8b3156b239f"></div>
+
+    <script type="text/javascript">
+      var nodes = [{"id": 3479, "group": "Movie", "label": "Titanic", "title": "{'year': 1997, 'title': 'Titanic'}"}, {"id": 3482, "group": "Person", "label": "Jane", "title": "{'surname': 'Doe', 'age': 28, 'name': 'Jane'}"}, {"id": 3480, "group": "Serie", "label": "The Walking Dead", "title": "{'year': 2010, 'title': 'The Walking Dead'}"}, {"id": 3481, "group": "Person", "label": "John", "title": "{'surname': 'Doe', 'age': 24, 'name': 'John'}"}, {"id": 3478, "group": "Movie", "label": "Inglourious Basterds", "title": "{'year': 2009, 'title': 'Inglourious Basterds'}"}, {"id": 3483, "group": "Movie", "label": "Memento", "title": "{'year': 2001, 'title': 'Memento'}"}, {"id": 3485, "group": "Movie", "label": "Inglourious Basterds", "title": "{'year': 2009, 'title': 'Inglourious Basterds'}"}, {"id": 3484, "group": "Movie", "label": "Memento", "title": "{'year': 2001, 'title': 'Memento'}"}, {"id": 3489, "group": "Person", "label": "Jane", "title": "{'surname': 'Doe', 'age': 28, 'name': 'Jane'}"}, {"id": 3488, "group": "Serie", "label": "The Walking Dead", "title": "{'year': 2010, 'title': 'The Walking Dead'}"}, {"id": 3486, "group": "Movie", "label": "Titanic", "title": "{'year': 1997, 'title': 'Titanic'}"}, {"id": 3487, "group": "Person", "label": "John", "title": "{'surname': 'Doe', 'age': 24, 'name': 'John'}"}];
+      var edges = [{"from": 3482, "label": "LIKES", "to": 3480}, {"from": 3482, "label": "LIKES", "to": 3479}, {"from": 3481, "label": "LIKES", "to": 3478}, {"from": 3481, "label": "LIKES", "to": 3480}, {"from": 3481, "label": "LIKES", "to": 3483}, {"from": 3481, "label": "IS_MARRIED_WITH", "to": 3482}, {"from": 3489, "label": "LIKES", "to": 3488}, {"from": 3489, "label": "LIKES", "to": 3486}, {"from": 3487, "label": "LIKES", "to": 3485}, {"from": 3487, "label": "LIKES", "to": 3488}, {"from": 3487, "label": "LIKES", "to": 3484}, {"from": 3487, "label": "IS_MARRIED_WITH", "to": 3489}];
+
+      var container = document.getElementById("fe4a17b5-aa7b-4770-a29b-d8b3156b239f");
+
+      var data = {
+        nodes: nodes,
+        edges: edges
+      };
+
+      var options = {
+          nodes: {
+              shape: 'dot',
+              size: 25,
+              font: {
+                  size: 14
+              }
+          },
+          edges: {
+              font: {
+                  size: 14,
+                  align: 'middle'
+              },
+              color: 'gray',
+              arrows: {
+                  to: {enabled: true, scaleFactor: 0.5}
+              },
+              smooth: {enabled: false}
+          },
+          physics: {
+              enabled: false
+          }
+      };
+
+      var network = new vis.Network(container, data, options);
+
+    </script>
+    </body>
+    </html>
+    

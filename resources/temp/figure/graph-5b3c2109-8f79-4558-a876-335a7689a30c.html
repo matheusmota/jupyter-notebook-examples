@@ -1,0 +1,51 @@
+
+    <html>
+    <head>
+      <script type="text/javascript" src="../../lib/vis/dist/vis.js"></script>
+      <link                         href="../../lib/vis/dist/vis.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+
+    <div id="5b3c2109-8f79-4558-a876-335a7689a30c"></div>
+
+    <script type="text/javascript">
+      var nodes = [{"title": "{'title': 'Titanic', 'year': 1997}", "id": 3491, "label": "Titanic", "group": "Movie"}, {"title": "{'title': 'Memento', 'year': 2001}", "id": 3495, "label": "Memento", "group": "Movie"}, {"title": "{'title': 'The Walking Dead', 'year': 2010}", "id": 3492, "label": "The Walking Dead", "group": "Serie"}, {"title": "{'age': 28, 'surname': 'Doe', 'name': 'Jane'}", "id": 3494, "label": "Jane", "group": "Person"}, {"title": "{'age': 24, 'surname': 'Doe', 'name': 'John'}", "id": 3493, "label": "John", "group": "Person"}, {"title": "{'title': 'Inglourious Basterds', 'year': 2009}", "id": 3490, "label": "Inglourious Basterds", "group": "Movie"}];
+      var edges = [{"to": 3492, "from": 3494, "label": "LIKES"}, {"to": 3491, "from": 3494, "label": "LIKES"}, {"to": 3490, "from": 3493, "label": "LIKES"}, {"to": 3492, "from": 3493, "label": "LIKES"}, {"to": 3495, "from": 3493, "label": "LIKES"}, {"to": 3494, "from": 3493, "label": "IS_MARRIED_WITH"}];
+
+      var container = document.getElementById("5b3c2109-8f79-4558-a876-335a7689a30c");
+
+      var data = {
+        nodes: nodes,
+        edges: edges
+      };
+
+      var options = {
+          nodes: {
+              shape: 'dot',
+              size: 25,
+              font: {
+                  size: 14
+              }
+          },
+          edges: {
+              font: {
+                  size: 14,
+                  align: 'middle'
+              },
+              color: 'gray',
+              arrows: {
+                  to: {enabled: true, scaleFactor: 0.5}
+              },
+              smooth: {enabled: false}
+          },
+          physics: {
+              enabled: false
+          }
+      };
+
+      var network = new vis.Network(container, data, options);
+
+    </script>
+    </body>
+    </html>
+    

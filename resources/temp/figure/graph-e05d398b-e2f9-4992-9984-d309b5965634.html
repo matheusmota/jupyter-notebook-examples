@@ -1,0 +1,51 @@
+
+    <html>
+    <head>
+      <script type="text/javascript" src="../../lib/vis/dist/vis.js"></script>
+      <link                         href="../../lib/vis/dist/vis.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+
+    <div id="e05d398b-e2f9-4992-9984-d309b5965634"></div>
+
+    <script type="text/javascript">
+      var nodes = [{"title": "{'age': 28, 'surname': 'Doe', 'name': 'Jane'}", "id": 3494, "label": "Jane", "group": "Person"}, {"title": "{'title': 'Memento', 'year': 2001}", "id": 3495, "label": "Memento", "group": "Movie"}, {"title": "{'age': 24, 'surname': 'Doe', 'name': 'John'}", "id": 3493, "label": "John", "group": "Person"}, {"title": "{'title': 'Inglourious Basterds', 'year': 2009}", "id": 3490, "label": "Inglourious Basterds", "group": "Movie"}, {"title": "{'title': 'Titanic', 'year': 1997}", "id": 3491, "label": "Titanic", "group": "Movie"}, {"title": "{'title': 'The Walking Dead', 'year': 2010}", "id": 3492, "label": "The Walking Dead", "group": "Serie"}];
+      var edges = [];
+
+      var container = document.getElementById("e05d398b-e2f9-4992-9984-d309b5965634");
+
+      var data = {
+        nodes: nodes,
+        edges: edges
+      };
+
+      var options = {
+          nodes: {
+              shape: 'dot',
+              size: 25,
+              font: {
+                  size: 14
+              }
+          },
+          edges: {
+              font: {
+                  size: 14,
+                  align: 'middle'
+              },
+              color: 'gray',
+              arrows: {
+                  to: {enabled: true, scaleFactor: 0.5}
+              },
+              smooth: {enabled: false}
+          },
+          physics: {
+              enabled: true
+          }
+      };
+
+      var network = new vis.Network(container, data, options);
+
+    </script>
+    </body>
+    </html>
+    
