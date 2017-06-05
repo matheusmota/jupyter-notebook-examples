@@ -6,8 +6,8 @@ def vis_network(nodes, edges, physics=False):
     html = """
     <html>
     <head>
-      <script type="text/javascript" src="../lib/vis/dist/vis.js"></script>
-      <link href="../lib/vis/dist/vis.css" rel="stylesheet" type="text/css">
+      <script type="text/javascript" src="../../lib/vis/dist/vis.js"></script>
+      <link                         href="../../lib/vis/dist/vis.css" rel="stylesheet" type="text/css">
     </head>
     <body>
 
@@ -58,7 +58,7 @@ def vis_network(nodes, edges, physics=False):
     unique_id = str(uuid.uuid4())
     html = html.format(id=unique_id, nodes=json.dumps(nodes), edges=json.dumps(edges), physics=json.dumps(physics))
 
-    filename = "figure/graph-{}.html".format(unique_id)
+    filename = "resources/temp/figure/graph-{}.html".format(unique_id)
 
     file = open(filename, "w")
     file.write(html)

@@ -1,0 +1,51 @@
+
+    <html>
+    <head>
+      <script type="text/javascript" src="../../lib/vis/dist/vis.js"></script>
+      <link                         href="../../lib/vis/dist/vis.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+
+    <div id="fc6d285e-fec7-4e1e-891a-cbba0370d40a"></div>
+
+    <script type="text/javascript">
+      var nodes = [{"id": 3430, "label": "", "title": "{'year': 2009, 'title': 'Inglourious Basterds'}", "group": "Movie"}, {"id": 3441, "label": "", "title": "{'year': 2010, 'title': 'The Walking Dead'}", "group": "Serie"}, {"id": 3438, "label": "", "title": "{'year': 2009, 'title': 'Inglourious Basterds'}", "group": "Movie"}, {"id": 3424, "label": "Jane", "title": "{'age': 28, 'name': 'Jane', 'surname': 'Doe'}", "group": "Person"}, {"id": 3427, "label": "", "title": "{'year': 2001, 'title': 'Memento'}", "group": "Movie"}, {"id": 3434, "label": "Jane", "title": "{'age': 28, 'name': 'Jane', 'surname': 'Doe'}", "group": "Person"}, {"id": 3439, "label": "", "title": "{'year': 1997, 'title': 'Titanic'}", "group": "Movie"}, {"id": 3433, "label": "John", "title": "{'age': 24, 'name': 'John', 'surname': 'Doe'}", "group": "Person"}, {"id": 3436, "label": "Jane", "title": "{'age': 28, 'name': 'Jane', 'surname': 'Doe'}", "group": "Person"}, {"id": 3435, "label": "", "title": "{'year': 2001, 'title': 'Memento'}", "group": "Movie"}, {"id": 3440, "label": "John", "title": "{'age': 24, 'name': 'John', 'surname': 'Doe'}", "group": "Person"}, {"id": 3431, "label": "", "title": "{'year': 1997, 'title': 'Titanic'}", "group": "Movie"}, {"id": 3428, "label": "", "title": "{'year': 2009, 'title': 'Inglourious Basterds'}", "group": "Movie"}, {"id": 3432, "label": "", "title": "{'year': 2010, 'title': 'The Walking Dead'}", "group": "Serie"}, {"id": 3429, "label": "", "title": "{'year': 1997, 'title': 'Titanic'}", "group": "Movie"}, {"id": 3437, "label": "", "title": "{'year': 2001, 'title': 'Memento'}", "group": "Movie"}, {"id": 3425, "label": "", "title": "{'year': 2010, 'title': 'The Walking Dead'}", "group": "Serie"}, {"id": 3426, "label": "John", "title": "{'age': 24, 'name': 'John', 'surname': 'Doe'}", "group": "Person"}];
+      var edges = [];
+
+      var container = document.getElementById("fc6d285e-fec7-4e1e-891a-cbba0370d40a");
+
+      var data = {
+        nodes: nodes,
+        edges: edges
+      };
+
+      var options = {
+          nodes: {
+              shape: 'dot',
+              size: 25,
+              font: {
+                  size: 14
+              }
+          },
+          edges: {
+              font: {
+                  size: 14,
+                  align: 'middle'
+              },
+              color: 'gray',
+              arrows: {
+                  to: {enabled: true, scaleFactor: 0.5}
+              },
+              smooth: {enabled: false}
+          },
+          physics: {
+              enabled: false
+          }
+      };
+
+      var network = new vis.Network(container, data, options);
+
+    </script>
+    </body>
+    </html>
+    

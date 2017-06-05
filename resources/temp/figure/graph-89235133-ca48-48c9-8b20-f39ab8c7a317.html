@@ -1,0 +1,51 @@
+
+    <html>
+    <head>
+      <script type="text/javascript" src="../resources/lib/vis/dist/vis.js"></script>
+      <link href="../resources/lib/vis/dist/vis.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+
+    <div id="89235133-ca48-48c9-8b20-f39ab8c7a317"></div>
+
+    <script type="text/javascript">
+      var nodes = [{"id": 3435, "label": "", "group": "Movie", "title": "{'year': 2001, 'title': 'Memento'}"}, {"id": 3424, "label": "Jane", "group": "Person", "title": "{'name': 'Jane', 'age': 28, 'surname': 'Doe'}"}, {"id": 3428, "label": "", "group": "Movie", "title": "{'year': 2009, 'title': 'Inglourious Basterds'}"}, {"id": 3431, "label": "", "group": "Movie", "title": "{'year': 1997, 'title': 'Titanic'}"}, {"id": 3439, "label": "", "group": "Movie", "title": "{'year': 1997, 'title': 'Titanic'}"}, {"id": 3438, "label": "", "group": "Movie", "title": "{'year': 2009, 'title': 'Inglourious Basterds'}"}, {"id": 3436, "label": "Jane", "group": "Person", "title": "{'name': 'Jane', 'age': 28, 'surname': 'Doe'}"}, {"id": 3433, "label": "John", "group": "Person", "title": "{'name': 'John', 'age': 24, 'surname': 'Doe'}"}, {"id": 3430, "label": "", "group": "Movie", "title": "{'year': 2009, 'title': 'Inglourious Basterds'}"}, {"id": 3441, "label": "", "group": "Serie", "title": "{'year': 2010, 'title': 'The Walking Dead'}"}, {"id": 3434, "label": "Jane", "group": "Person", "title": "{'name': 'Jane', 'age': 28, 'surname': 'Doe'}"}, {"id": 3427, "label": "", "group": "Movie", "title": "{'year': 2001, 'title': 'Memento'}"}, {"id": 3425, "label": "", "group": "Serie", "title": "{'year': 2010, 'title': 'The Walking Dead'}"}, {"id": 3440, "label": "John", "group": "Person", "title": "{'name': 'John', 'age': 24, 'surname': 'Doe'}"}, {"id": 3426, "label": "John", "group": "Person", "title": "{'name': 'John', 'age': 24, 'surname': 'Doe'}"}, {"id": 3432, "label": "", "group": "Serie", "title": "{'year': 2010, 'title': 'The Walking Dead'}"}, {"id": 3429, "label": "", "group": "Movie", "title": "{'year': 1997, 'title': 'Titanic'}"}, {"id": 3437, "label": "", "group": "Movie", "title": "{'year': 2001, 'title': 'Memento'}"}];
+      var edges = [];
+
+      var container = document.getElementById("89235133-ca48-48c9-8b20-f39ab8c7a317");
+
+      var data = {
+        nodes: nodes,
+        edges: edges
+      };
+
+      var options = {
+          nodes: {
+              shape: 'dot',
+              size: 25,
+              font: {
+                  size: 14
+              }
+          },
+          edges: {
+              font: {
+                  size: 14,
+                  align: 'middle'
+              },
+              color: 'gray',
+              arrows: {
+                  to: {enabled: true, scaleFactor: 0.5}
+              },
+              smooth: {enabled: false}
+          },
+          physics: {
+              enabled: false
+          }
+      };
+
+      var network = new vis.Network(container, data, options);
+
+    </script>
+    </body>
+    </html>
+    
